@@ -16,6 +16,7 @@
 | 7 | can u gimme the exact git command, also my user name is qse0514 | 这个项目当前还不是 git 仓库，所以精确命令从 `git init` 开始；远端地址用 `https://github.com/qse0514/stingy.git`，推送前必须用 `git status --short` 确认 `.env` / `node_modules` / `dist` 没进暂存。 |
 | 8 | how do i avoid commiting some files that im not suppose to? like the node modules and .env | 用 `.gitignore` 把不能进仓库的文件列入黑名单，例如 `.env`、`node_modules/`、`dist/`；提交前用 `git status --short` 检查，若已经误 add，用 `git restore --staged <file>` 从暂存区撤掉。 |
 | 9 | git add --dry-run 输出这一长串，安全吗？ | 安全：dry-run 里出现的是会被提交的文件，当前没有 `server/.env`、`node_modules`、`dist`；`server/.env.example` 可以提交，因为它是模板。下一步可以 `git add .`、`git status --short`、`git commit`，再连接 GitHub remote push。 |
+| 10 | git push 报 Invalid username or token / Password authentication is not supported 怎么办？ | 这不是代码问题，是 GitHub HTTPS 登录规则：不能用账号密码 push，必须用 Personal Access Token 当密码，或改用 SSH key。最短修法：在 GitHub 生成 fine-grained/classic token，权限给 repo，再重新 `git push -u origin main`，用户名填 `qse0514`，密码粘 token。 |
 
 ## 踩坑记录
 
