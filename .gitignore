@@ -27,3 +27,6 @@ pnpm-debug.log*
 !.vscode/extensions.json
 .idea/
 *.sw?
+
+# Local git history backups (hold pre-scrub history with the internal registry host — never commit)
+*.bundle
