@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+/* 🎨 AI 回答里的 Markdown 基础排版
+   ⚠️ Tailwind 的 preflight 把 ul/ol/h1~h3/code 的默认样式全重置了 ——
+   以前 AI 消息穿着灰气泡看不出来，现在 ChatGPT 式裸文字一铺就露馅 */
+.md p { margin: 0.5rem 0; }
+.md p:first-child { margin-top: 0; }
+.md ul { list-style: disc; padding-left: 1.25rem; margin: 0.5rem 0; }
+.md ol { list-style: decimal; padding-left: 1.25rem; margin: 0.5rem 0; }
+.md h1, .md h2, .md h3 { font-weight: 600; margin: 0.75rem 0 0.25rem; }
+.md strong { font-weight: 600; }
+.md code { background: #f3f4f6; padding: 0.1rem 0.3rem; border-radius: 0.25rem; font-size: 0.875em; }
+.md pre { background: #18181b; color: #f4f4f5; padding: 0.75rem 1rem; border-radius: 0.5rem; overflow-x: auto; margin: 0.5rem 0; }
+.md pre code { background: transparent; padding: 0; color: inherit; }

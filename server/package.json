@@ -1,0 +1,44 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "db:check": "tsx src/services/db.ts",
+    "exp:trace": "tsx src/experiments/test-trace.ts",
+    "exp:reconcile": "tsx src/experiments/test-reconcile.ts",
+    "exp:isolation": "tsx src/experiments/test-isolation.ts",
+    "exp:reflect": "tsx src/experiments/test-reflect.ts",
+    "exp:draftab": "tsx src/experiments/test-draftab.ts",
+    "exp:query": "tsx src/experiments/test-query.ts",
+    "exp:groupby": "tsx src/experiments/test-groupby.ts",
+    "exp:groupby2": "tsx src/experiments/test-groupby2.ts",
+    "exp:tools": "tsx src/experiments/test-tools.ts",
+    "exp:prune": "tsx src/experiments/test-prune.ts",
+    "exp:crud": "tsx src/experiments/test-crud.ts",
+    "exp:memory": "tsx src/experiments/test-memory.ts",
+    "exp:afterconfirm": "tsx src/experiments/test-afterconfirm.ts",
+    "exp:confirmsync": "tsx src/experiments/test-confirmsync.ts",
+    "exp:budget": "tsx src/experiments/test-budget.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.23.2",
+    "openai": "^6.49.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  }
+}
